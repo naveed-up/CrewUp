@@ -1,0 +1,6 @@
+{
+  "name": "CrewUp",
+  "description": "Find trusted subcontractors and build stronger teams. CrewUp is the marketplace for construction professionals to connect, negotiate, and collaborate.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
