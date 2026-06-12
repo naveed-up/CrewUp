@@ -234,11 +234,11 @@ export default function DashboardView({ onLogout }: DashboardViewProps) {
         </div>
       </header>
 
-      {/* Main Container Layer */}
-      <div className="flex-1 flex flex-col md:flex-row">
+      {/* Main Container Layer with extra bottom padding on mobile to accommodate bottom tabs */}
+      <div className="flex-1 flex flex-col md:flex-row pb-20 md:pb-0">
         
-        {/* Navigation Sidebar */}
-        <aside className="w-full md:w-64 bg-white border-r border-slate-200 p-4 shrink-0 flex flex-col justify-between">
+        {/* Navigation Sidebar - hidden on mobile, visible on desktop */}
+        <aside className="hidden md:flex w-full md:w-64 bg-white border-r border-slate-200 p-4 shrink-0 flex-col justify-between">
           <div className="flex flex-col gap-1.5">
             <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider mb-2 block">Main Portal Tabs</span>
             
@@ -1012,6 +1012,50 @@ export default function DashboardView({ onLogout }: DashboardViewProps) {
           </div>
         </div>
       )}
+
+      {/* Mobile Sticky Tab Bar (Only visible on small/medium screens) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 shadow-xl px-2 py-2.5 flex justify-around items-center">
+        <button
+          onClick={() => setActiveTab("overview")}
+          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all ${
+            activeTab === "overview" ? "text-blue-600 font-bold" : "text-slate-500"
+          }`}
+        >
+          <Building className="h-5 w-5" />
+          <span className="text-[10px] tracking-tight">Overview</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab("projects")}
+          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all ${
+            activeTab === "projects" ? "text-blue-600 font-bold" : "text-slate-500"
+          }`}
+        >
+          <Folder className="h-5 w-5" />
+          <span className="text-[10px] tracking-tight">Projects</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab("contractors")}
+          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all ${
+            activeTab === "contractors" ? "text-blue-600 font-bold" : "text-slate-500"
+          }`}
+        >
+          <User className="h-5 w-5" />
+          <span className="text-[10px] tracking-tight">Contractors</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab("messages")}
+          className={`relative flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all ${
+            activeTab === "messages" ? "text-blue-600 font-bold" : "text-slate-500"
+          }`}
+        >
+          <MessageSquare className="h-5 w-5" />
+          <span className="text-[10px] tracking-tight">Chat</span>
+          <span className="absolute top-1 right-3.5 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-white animate-pulse" />
+        </button>
+      </div>
 
     </div>
   );

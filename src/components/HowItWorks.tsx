@@ -68,17 +68,17 @@ export default function HowItWorks({ onLogin, onPostProject }: HowItWorksProps) 
     {
       number: "2",
       title: "Post or Search Projects",
-      description: "Post upcoming jobs or browse opportunities that match your skills, requirements, and service location."
+      description: "Post upcoming jobs or browse opportunities that match your skills and service area."
     },
     {
       number: "3",
       title: "Connect With the Right Pros",
-      description: "Message in real-time, compare past ratings, and build trusted relationships with qualified service professionals."
+      description: "Message, compare, and build trusted relationships with qualified professionals."
     },
     {
       number: "4",
       title: "Build Better Together",
-      description: "Stay connected, cover labor shortages, win more quotes, and scale stronger long-term construction networks."
+      description: "Stay connected, fill labor gaps, win more work, and grow stronger project networks."
     }
   ];
 
@@ -170,14 +170,14 @@ export default function HowItWorks({ onLogin, onPostProject }: HowItWorksProps) 
                   {/* 4 Cards state indicators */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {[
-                      { val: "12", lbl: "Active Projs" },
+                      { val: "12", lbl: "Active Projects" },
                       { val: "28", lbl: "Messages" },
                       { val: "15", lbl: "Saved Contractors" },
                       { val: "4", lbl: "Project Invites" }
                     ].map((card, idx) => (
                       <div key={idx} className="bg-white rounded-xl p-2.5 border border-slate-100 flex flex-col justify-between shadow-xs">
-                        <span className="font-display text-base font-black text-blue-600">{card.val}</span>
-                        <span className="text-[9px] font-semibold text-slate-500 whitespace-nowrap mt-1">{card.lbl}</span>
+                        <span className="font-display text-xs sm:text-base font-black text-blue-600">{card.val}</span>
+                        <span className="text-[8px] sm:text-[9px] font-semibold text-slate-500 whitespace-wrap mt-1">{card.lbl}</span>
                       </div>
                     ))}
                   </div>
@@ -259,10 +259,10 @@ export default function HowItWorks({ onLogin, onPostProject }: HowItWorksProps) 
         </div>
 
         {/* Dynamic Metric Counter Rows Bar */}
-        <div className="mt-24 border border-blue-100 bg-white rounded-2xl p-6 sm:p-8 shadow-lg shadow-blue-500/5 hover:shadow-blue-500/10 transition-all duration-300">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y-2 lg:divide-y-0 lg:divide-x divide-slate-100">
+        <div className="mt-24 border border-blue-150 border-blue-100 bg-white rounded-2xl p-6 sm:p-8 shadow-lg shadow-blue-500/5 hover:shadow-blue-500/10 transition-all duration-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 divide-y sm:divide-y-0 sm:divide-x-0 lg:divide-x divide-slate-100">
             {statsList.map((st, i) => (
-              <div key={i} className="flex items-center gap-4.5 px-4 first:pl-0 last:pr-0 pt-4 first:pt-0 lg:pt-0">
+              <div key={i} className="flex items-center gap-4.5 px-0 sm:px-4 lg:px-6 first:pl-0 last:pr-0 pt-4 first:pt-0 sm:pt-0">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50">
                   {st.icon}
                 </div>

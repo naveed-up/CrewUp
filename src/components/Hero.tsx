@@ -19,11 +19,11 @@ export default function Hero({ onFindSubcontractors, onPostProject }: HeroProps)
           
           {/* Left Text Column */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left max-w-xl">
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-[72px] font-black leading-tight tracking-tight text-slate-900">
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-[72px] font-black leading-tight tracking-tight text-slate-900">
               Build Better.
               <span className="block mt-2 text-blue-600">Together.</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">
+            <p className="mt-6 text-base sm:text-xl text-slate-600 leading-relaxed">
               CrewUp is the marketplace for general contractors to find trusted subcontractors and build stronger teams.
             </p>
             
@@ -31,23 +31,23 @@ export default function Hero({ onFindSubcontractors, onPostProject }: HeroProps)
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onFindSubcontractors}
-                className="flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4.5 rounded-xl text-[16px] shadow-lg shadow-blue-500/15 hover:shadow-blue-500/25 active:scale-[0.99] transition-all duration-150"
+                className="flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 sm:py-4.5 rounded-xl text-sm sm:text-[16px] shadow-lg shadow-blue-500/15 hover:shadow-blue-500/25 active:scale-[0.99] transition-all duration-150"
               >
-                <Search className="h-5 w-5" />
+                <Search className="h-4 sm:h-5 w-4 sm:w-5" />
                 Find Subcontractors
               </button>
               <button
                 onClick={onPostProject}
-                className="flex items-center justify-center gap-2.5 border-2 border-blue-600 hover:bg-blue-50/50 text-blue-600 font-bold px-8 py-4.5 rounded-xl text-[16px] active:scale-[0.99] transition-all duration-150"
+                className="flex items-center justify-center gap-2.5 border-2 border-blue-600 hover:bg-blue-50/50 text-blue-600 font-bold px-8 py-4 sm:py-4.5 rounded-xl text-sm sm:text-[16px] active:scale-[0.99] transition-all duration-150"
               >
-                <Plus className="h-5 w-5 stroke-[2.5]" />
+                <Plus className="h-4 sm:h-5 w-4 sm:w-5 stroke-[2.5]" />
                 Post a Project
               </button>
             </div>
           </div>
 
           {/* Right Image Column */}
-          <div className="lg:col-span-6 relative h-[400px] sm:h-[500px] lg:h-[580px] w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+          <div className="lg:col-span-6 relative h-[250px] sm:h-[450px] lg:h-[580px] w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
             {/* Image using high quality construction workers looking at tablet */}
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1200')` }} />
             
